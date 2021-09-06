@@ -1,0 +1,65 @@
+@import 'config';
+
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Mono', sans-serif;
+    line-height: 1.6;
+    background-color: $light_greyish_cyan_1;
+    color: $dark_greyish_cyan_1;
+}
+
+// Fix this !!!
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8.75rem 0rem;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    max-width: 925px;
+    margin: auto;
+    padding: 2.8rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    font-weight: 700;
+}
+
+.card .right {
+    display: flex;
+    flex-direction: column;
+    background-color: $dark_cyan;
+    border-radius: 15px;
+    padding: 3.75rem, 2.25rem;
+}
+
+.card .input {
+    background-color: $light_greyish_cyan_2;
+    border-radius: 4px;
+    padding: 1rem;
+    color: $dark_greyish_cyan_2;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.option {
+    background-color: $dark_cyan;
+    border-radius: 4px;
+    color: $white;
+    font-size: 1.5rem;
+    padding: 1em, 2em;
+    text-align: center;
+}
