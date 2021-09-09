@@ -47,12 +47,10 @@ input:focus, input:hover {
     border: $strong_cyan 2px solid;
     color: $dark_cyan;
     cursor: pointer;
-}
+} // input:hover should only be for desktop not mobile
 
 input:valid {
     color: $dark_cyan;
-    outline: none;
-    border: none;
 }
 
 #logo {
