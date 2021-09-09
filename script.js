@@ -1,7 +1,7 @@
-function getTipAmount() {
+function getSums() {
 
     const bill = parseFloat(document.getElementById("bill").value, 10);
-    const people = parseInt(document.getElementById("people").value, 10);
+    const people = parseFloat(document.getElementById("people").value, 10);
     const tip_button = document.querySelector(".active");
 
     if (isNaN(people) == false && tip_button !== null) {
@@ -12,7 +12,7 @@ function getTipAmount() {
         tip_amount_pp = tip_amount_pp.toFixed(2)
         let total_pp = (bill + tip_amount) / people
         total_pp = total_pp.toFixed(2)
-        
+
         document.querySelector('.sum.tip').textContent = '$'.concat(tip_amount_pp)
         document.querySelector('.sum.total').textContent = '$'.concat(total_pp)
     }
