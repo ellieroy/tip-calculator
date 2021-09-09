@@ -108,9 +108,15 @@ input:valid {
     font-family: 'Space Mono', sans-serif;
 }
 
-.section-1 .option:focus, .section-1 .option:hover {
+.section-1 .option:focus {
     background-color: $strong_cyan;
     color: $dark_cyan;
+}
+
+.section-1 .option:hover {
+    background-color: lighten($strong_cyan, 35%);
+    color: $dark_cyan;
+    cursor: pointer;
 }
 
 .section-1 #custom {
@@ -165,6 +171,8 @@ input:valid {
     border-radius: 4px;
 }
 
-// #reset:focus {
-
-// }
+#reset:focus, #reset:hover {
+    background-color: lighten($strong_cyan, 35%);
+    color: $dark_cyan;
+    cursor: pointer;
+}
