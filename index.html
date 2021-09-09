@@ -15,42 +15,42 @@
   <div class="card">
     
     <section class="section-1">
+
+      <form class="input">
+        <label>Bill</label>
+        <input type="text" placeholder="0" id="bill" class="input-value">
+      </form>
+
       <div class="container">
-        <h1>Bill</h1>
-        <div class="input">
-          <img src="dist/images/icon-dollar.svg" alt=""> 0
-        </div>
-      </div>
-      
-      <div class="container">
-        <h1>Select Tip %</h1>
+        <h2>Select Tip %</h2>
         <div class="options">
           <button class="option">5%</button>
           <button class="option">10%</button>
           <button class="option">15%</button>
           <button class="option">25%</button>
           <button class="option">50%</button>
-          <button class="option custom">Custom</button>
+          <form>
+            <input type="text" placeholder="Custom" id="custom">
+          </form>
         </div>
       </div>
       
-      <div class="container">
-        <h1>Number of People</h1>
-        <div class="input">
-          <img src="dist/images/icon-person.svg" alt=""> 0 
-        </div>
-      </div>
+      <form class="input">
+        <label>Number of people</label>
+        <input type="text" placeholder="0" id="people", class="input-value">
+      </form>
+      
     </section>
 
     <section class="section-2">
       <div class="output">
-        <h1>Tip Amount</h1>
+        <h2>Tip Amount</h2>
         <h3>/ person</h3>
         <div class="sum">$0.00</div>
       </div>
       
       <div class="output">
-        <h1>Total</h1>
+        <h2>Total</h2>
         <h3>/ person</h3>
         <div class="sum">$0.00</div>
       </div>
