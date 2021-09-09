@@ -108,7 +108,7 @@ input:valid {
     font-family: 'Space Mono', sans-serif;
 }
 
-.section-1 .option:focus {
+.section-1 .active {
     background-color: $strong_cyan;
     color: $dark_cyan;
 }
@@ -171,7 +171,7 @@ input:valid {
     border-radius: 4px;
 }
 
-#reset:focus, #reset:hover {
+#reset:active, #reset:hover {
     background-color: lighten($strong_cyan, 35%);
     color: $dark_cyan;
     cursor: pointer;
