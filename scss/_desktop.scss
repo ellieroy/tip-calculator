@@ -68,7 +68,7 @@
         margin-top: 6em; 
         margin-bottom: 1em;
 
-        &:hover{
+        &:hover, &:active {
             background-color: lighten($strong_cyan, 35%);
             color: $dark_cyan;
             cursor: pointer;
