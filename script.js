@@ -36,6 +36,8 @@ function clearInputs() {
     document.querySelector('.sum.tip').textContent = '$0.00'
     document.querySelector('.sum.total').textContent = '$0.00'
 
+    document.querySelector('#reset').style.backgroundColor('$strong-cyan')
+
 }
 
 const buttons = document.getElementsByClassName("option");
