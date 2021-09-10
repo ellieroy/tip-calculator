@@ -20,7 +20,7 @@ function getSums() {
 }
 
 function clearInputs() {
-
+      
     let inputElements = document.getElementsByTagName("input"); 
 
     for (let i=0; i<inputElements.length; i++) {
@@ -35,8 +35,6 @@ function clearInputs() {
 
     document.querySelector('.sum.tip').textContent = '$0.00'
     document.querySelector('.sum.total').textContent = '$0.00'
-
-    document.querySelector('#reset').style.backgroundColor('$strong-cyan')
 
 }
 
