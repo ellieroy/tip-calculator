@@ -6,7 +6,7 @@ function getSums() {
 
     if (isNaN(people) == false && tip_button !== null && isNaN(bill) == false) {
         
-        const tip = parseInt(tip_button.textContent, 10);
+        const tip = parseFloat(tip_button.textContent, 10);
         const tip_amount = bill * tip / 100
         let tip_amount_pp = tip_amount / people
         tip_amount_pp = tip_amount_pp.toFixed(2)
