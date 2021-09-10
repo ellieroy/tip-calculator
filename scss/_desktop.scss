@@ -1,5 +1,13 @@
-@media (min-width: 700px) {
+@media (min-width: 770px) {
     
+    h2 {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-size: 0.9em;
+    }
+
     input {
 
         &:hover {
@@ -11,17 +19,27 @@
     }
 
     .card {
+        max-width: 57.5em;
         display: flex;
         justify-content: space-between;
+        padding: 3em;
     }
 
     .section-1 {
 
         flex-basis: 47%;
 
-        // .options {
-        //     display: block;
-        // }
+        .container {
+            margin-bottom: 2.5em;
+        }
+    
+        .input {
+            margin-bottom: 2.5em;
+        }
+
+        .options {
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         .option {
 
@@ -30,18 +48,31 @@
                 color: $dark_cyan;
                 cursor: pointer;
             }
-
-            &:active {
-                outline: none;
-                border: $strong_cyan 2px solid;
-                color: $dark_cyan;
-                cursor: pointer;
-            }
         }
     }
 
     .section-2 {
         flex-basis: 47%;
+        padding: 2em;
+
+        .output {
+
+            .sum {
+                font-size: 2em;
+            }
+        }
+    }
+
+    #reset {
+        
+        margin-top: 6em; 
+        margin-bottom: 1em;
+
+        &:hover{
+            background-color: lighten($strong_cyan, 35%);
+            color: $dark_cyan;
+            cursor: pointer;
+        }
     }
     
 }

@@ -1,5 +1,4 @@
 @import 'config';
-@import 'desktop';
 
 * { 
     box-sizing: border-box;
@@ -59,6 +58,7 @@ button {
 }
 
 .card {
+    max-width: 95%;
     background-color: $white;
     margin-bottom: 2em;
     padding: 2rem;
@@ -170,9 +170,11 @@ button {
     padding: 0.5em;
     border-radius: 4px;
 
-    &:active, &:hover {
+    &:active {
         background-color: lighten($strong_cyan, 35%);
         color: $dark_cyan;
         cursor: pointer;
     }
 }
+
+@import 'desktop';
