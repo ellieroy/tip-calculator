@@ -1,0 +1,40 @@
+@media (min-width: 700px) {
+    
+    input {
+
+        &:hover {
+            outline: none;
+            border: $strong_cyan 2px solid;
+            color: $dark_cyan;
+            cursor: pointer;
+        }
+    }
+
+    .card {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section-1 {
+
+        flex-basis: 47%;
+
+        // .options {
+        //     display: block;
+        // }
+
+        .option {
+
+            &:hover {
+                background-color: lighten($strong_cyan, 35%);
+                color: $dark_cyan;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .section-2 {
+        flex-basis: 47%;
+    }
+    
+}

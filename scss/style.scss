@@ -1,4 +1,5 @@
 @import 'config';
+@import 'desktop';
 
 * { 
     box-sizing: border-box;
@@ -41,7 +42,7 @@ input {
     color: $dark_greyish_cyan_2;
     font-family: $font-stack;
 
-    &:focus, &:hover {
+    &:focus {
         outline: none;
         border: $strong_cyan 2px solid;
         color: $dark_cyan;
@@ -99,12 +100,6 @@ button {
         text-align: center;
         font-weight: 700;
         border: none;
-
-        &:hover {
-            background-color: lighten($strong_cyan, 35%);
-            color: $dark_cyan;
-            cursor: pointer;
-        }
     }
 
     .active {
