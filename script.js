@@ -4,7 +4,7 @@ function getSums() {
     const people = parseFloat(document.getElementById("people").value, 10);
     const tip_button = document.querySelector(".active");
 
-    if (isNaN(people) == false && tip_button !== null) {
+    if (isNaN(people) == false && tip_button !== null && isNaN(bill) == false) {
         
         const tip = parseInt(tip_button.textContent, 10);
         const tip_amount = bill * tip / 100
@@ -45,11 +45,11 @@ for (let i=0; i<buttons.length; i++) {
       let current = document.getElementsByClassName("active");
       if (current.length == 0) {
         this.className += " active";
-        getTipAmount();
+        getSums();
       } else {
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
-        getTipAmount();
+        getSums();
       }
     });
   }
