@@ -34,7 +34,7 @@ input {
     -webkit-appearance: none;
     width: 100%;
     background-color: $light_greyish_cyan_2;
-    border: none;
+    border: $light_greyish_cyan_2 2px solid;
     border-radius: 4px;
     font-size: 1.5rem;
     font-weight: 700;
