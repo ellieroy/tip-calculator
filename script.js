@@ -1,7 +1,7 @@
 function getSums() {
 
-    const bill = parseFloat(document.getElementById("bill").value, 10);
-    const people = parseFloat(document.getElementById("people").value, 10);
+    const bill = parseFloat(document.getElementById("bill").value.replace(/,/g, '.') , 10);
+    const people = parseFloat(document.getElementById("people").value.replace(/,/g, '.') , 10);
     const tip_button = document.querySelector(".active");
 
     if (isNaN(people) == false && tip_button !== null && isNaN(bill) == false) {
