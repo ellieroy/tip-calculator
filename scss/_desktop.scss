@@ -47,6 +47,7 @@
                 background-color: lighten($strong_cyan, 35%);
                 color: $dark_cyan;
                 cursor: pointer;
+                transition: 0.2s ease-in;
             }
         }
     }
