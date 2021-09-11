@@ -6,15 +6,22 @@ function getSums() {
 
     if (isNaN(people) == false && tip_button !== null && isNaN(bill) == false) {
         
-        const tip = parseFloat(tip_button.textContent, 10);
-        const tip_amount = bill * tip / 100
-        let tip_amount_pp = tip_amount / people
-        tip_amount_pp = tip_amount_pp.toFixed(2)
-        let total_pp = (bill + tip_amount) / people
-        total_pp = total_pp.toFixed(2)
+      const tip = parseFloat(tip_button.textContent, 10);
+      const tip_amount = bill * tip / 100
+      let tip_amount_pp = tip_amount / people
+      tip_amount_pp = tip_amount_pp.toFixed(2)
+      let total_pp = (bill + tip_amount) / people
+      total_pp = total_pp.toFixed(2)
 
-        document.querySelector('.sum.tip').textContent = '$'.concat(tip_amount_pp)
-        document.querySelector('.sum.total').textContent = '$'.concat(total_pp)
+      document.querySelector('.sum.tip').textContent = '$'.concat(tip_amount_pp);
+      document.querySelector('.sum.total').textContent = '$'.concat(total_pp);
+
+    } else if (isNaN(people) == false || tip_button !== null || isNaN(bill) == false) {
+
+      let reset = document.getElementById('reset'); 
+      reset.className = "";
+      reset.className += "active";
+
     }
     
 }
@@ -35,6 +42,9 @@ function clearInputs() {
 
     document.querySelector('.sum.tip').textContent = '$0.00'
     document.querySelector('.sum.total').textContent = '$0.00'
+
+    let reset = document.getElementById('reset'); 
+    reset.className = "";
 
 }
 

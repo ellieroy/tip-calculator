@@ -69,10 +69,11 @@
         margin-top: 6em; 
         margin-bottom: 1em;
 
-        &:hover, &:active {
-            background-color: lighten($strong_cyan, 35%);
+        &:hover {
+            background-color: lighten($strong_cyan, 35%) !important;
             color: $dark_cyan;
             cursor: pointer;
+            transition: 0.2s ease-in;
         }
     }
     
