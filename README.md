@@ -13,8 +13,8 @@ Users should be able to:
 ### Screenshots
 
 <p float="left">
-  <img src="/final-result/final-result-desktop.png" width="600"/> 
-  <img src="/final-result/final-result-mobile.png" width="200"/> 
+  <img src="final-result/final-result-desktop.png" width="600"/> 
+  <img src="final-result/final-result-mobile.png" width="200"/> 
 </p>
 
 ### Links
