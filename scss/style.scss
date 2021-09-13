@@ -57,6 +57,11 @@ button {
     font-family: $font-stack;
 }
 
+.hidden {
+    display: none;
+    color: salmon;
+}
+
 .card {
     max-width: 95%;
     background-color: $white;
@@ -151,6 +156,11 @@ button {
 
 #people {
     background-image: url(../images/icon-person.svg);
+}
+
+#people_label {
+    display: flex; 
+    justify-content: space-between;
 }
 
 #custom {
