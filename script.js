@@ -18,18 +18,18 @@ function getSums() {
       document.querySelector('.sum.tip').textContent = '$0.00'
       document.querySelector('.sum.total').textContent = '$0.00'
     }
+
+    if (people == 0) {
+      document.getElementsByClassName("hidden")[0].style.display = "block";
+      document.getElementById("people_label").nextElementSibling.style.border = "solid 2px hsl(6, 93%, 71%)";
+      document.querySelector('.sum.tip').textContent = '$0.00'
+      document.querySelector('.sum.total').textContent = '$0.00'
+    }
     
     if (isNaN(people) == false && isNaN(tip) == false && isNaN(bill) == false) {
 
-      if (people == 0) {
-
-        document.getElementsByClassName("hidden")[0].style.display = "block";
-        document.getElementById("people_label").nextElementSibling.style.border = "solid 2px hsl(6, 93%, 71%)";
-        document.querySelector('.sum.tip').textContent = '$0.00'
-        document.querySelector('.sum.total').textContent = '$0.00'
-
-      } else {
-
+      if (people !== 0) {
+        
         document.getElementsByClassName("hidden")[0].style.display = "none";
         document.getElementById("people_label").nextElementSibling.style.border = "none";
         const tipAmount = bill * tip / 100
