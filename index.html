@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="dist/css/style.css">
   <script>
     function restrictAlphabets(e) {
-      let x = e.which || e.keycode;  
-      if ((x >= 48 && x <= 57))
+      let x = e.key; 
+      if ((x >= 0 && x <= 9 || x==',' || x=='.'))
         return true;
       else
         return false;
