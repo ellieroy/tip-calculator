@@ -15,21 +15,19 @@ function getSums() {
     }
 
     if (isNaN(tip) == true) {
-      document.querySelector('.sum.tip').textContent = '$0.00'
-      document.querySelector('.sum.total').textContent = '$0.00'
+      resetSums()
     }
 
     if (people == 0) {
       document.getElementsByClassName("hidden")[0].style.display = "block";
       document.getElementById("people_label").nextElementSibling.style.border = "solid 2px hsl(6, 93%, 71%)";
-      document.querySelector('.sum.tip').textContent = '$0.00'
-      document.querySelector('.sum.total').textContent = '$0.00'
+      resetSums()
     }
     
     if (isNaN(people) == false && isNaN(tip) == false && isNaN(bill) == false) {
 
       if (people !== 0) {
-        
+
         document.getElementsByClassName("hidden")[0].style.display = "none";
         document.getElementById("people_label").nextElementSibling.style.border = "none";
         const tipAmount = bill * tip / 100
@@ -66,14 +64,18 @@ function clearInputs() {
         activeButton[0].className = activeButton[0].className.replace(" active", ""); 
     }
 
-    document.querySelector('.sum.tip').textContent = '$0.00'
-    document.querySelector('.sum.total').textContent = '$0.00'
+    resetSums()
     document.getElementsByClassName("hidden")[0].style.display = "none";
     document.getElementById("people_label").nextElementSibling.style.border = "none";
 
     let reset = document.getElementById('reset'); 
     reset.className = "";
 
+}
+
+function resetSums() {
+  document.querySelector('.sum.tip').textContent = '$0.00'
+  document.querySelector('.sum.total').textContent = '$0.00'
 }
 
 const buttons = document.getElementsByClassName("option");
