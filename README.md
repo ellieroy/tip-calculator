@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/tip-calculator-app-7fT5t2eH8](https://www.frontendmentor.io/solutions/tip-calculator-app-7fT5t2eH8)
 - Live Site URL: [https://ellieroy.github.io/tip-calculator/](https://ellieroy.github.io/tip-calculator/)
 
 ### Built with
