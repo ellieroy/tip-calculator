@@ -2,21 +2,30 @@ function getSums() {
 
     const bill = parseFloat(document.getElementById("bill").value.replace(/,/g, '.') , 10);
     const people = parseFloat(document.getElementById("people").value.replace(/,/g, '.') , 10);
-    const tip_button = document.querySelector(".active");
+    const tipButton = document.querySelector(".active");
+    const customTip = parseFloat(document.getElementById("custom").value, 10); 
+    let tip; 
 
-    if (isNaN(people) == false && tip_button !== null && isNaN(bill) == false) {
+    if (isNaN(customTip) == false) {
+      tip = customTip;
+    } else if (tipButton !== null) {
+      tip = parseFloat(tipButton.textContent, 10);
+    } else {
+      tip = null; 
+    }
+    
+    if (isNaN(people) == false && tip !== null && isNaN(bill) == false) {
         
-      const tip = parseFloat(tip_button.textContent, 10);
-      const tip_amount = bill * tip / 100
-      let tip_amount_pp = tip_amount / people
-      tip_amount_pp = tip_amount_pp.toFixed(2)
-      let total_pp = (bill + tip_amount) / people
+      const tipAmount = bill * tip / 100
+      let tipAmount_pp = tipAmount / people
+      tipAmount_pp = tipAmount_pp.toFixed(2)
+      let total_pp = (bill + tipAmount) / people
       total_pp = total_pp.toFixed(2)
 
-      document.querySelector('.sum.tip').textContent = '$'.concat(tip_amount_pp);
+      document.querySelector('.sum.tip').textContent = '$'.concat(tipAmount_pp);
       document.querySelector('.sum.total').textContent = '$'.concat(total_pp);
 
-    } else if (isNaN(people) == false || tip_button !== null || isNaN(bill) == false) {
+    } else if (isNaN(people) == false || tipButton !== null || isNaN(bill) == false || isNaN(customTip) == false) {
 
       let reset = document.getElementById('reset'); 
       reset.className = "";
@@ -61,6 +70,20 @@ for (let i=0; i<buttons.length; i++) {
         this.className += " active";
         getSums();
       }
+
+      let customTip = document.getElementById("custom");
+      if (customTip.value.length > 0) {
+        customTip.value = "";
+        getSums();
+      }
     });
   }
 
+  const customTip = document.getElementById("custom");
+
+  customTip.addEventListener("input", function() {
+    let tipButton =  document.getElementsByClassName("active")
+    if (tipButton.length > 0) {
+      tipButton[0].className = tipButton[0].className.replace(" active", "");
+    }
+  });
