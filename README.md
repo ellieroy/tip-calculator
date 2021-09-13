@@ -2,8 +2,6 @@
 
 This is my solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). 
 
-## Table of contents
-
 ## Overview
 
 Users should be able to:
@@ -15,8 +13,8 @@ Users should be able to:
 ### Screenshots
 
 <p float="left">
-  <img src="./final-result/final-result-desktop.png" width="600"/> 
-  <img src="./final-result/final-result-mobile.png" width="200"/> 
+  <img src="/final-result/final-result-desktop.png" width="600"/> 
+  <img src="/final-result/final-result-mobile.png" width="200"/> 
 </p>
 
 ### Links
