@@ -1,77 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="dist/images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="dist/css/style.css">
-  <script>
-    function restrictAlphabets(e) {
-      let x = e.key; 
-      if ((x >= 0 && x <= 9 || x==',' || x=='.'))
-        return true;
-      else
-        return false;
-    }
-  </script>
-  <title>Splitter | Tip calculator</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script>
+      function restrictAlphabets(e) {
+        let x = e.key; 
+        if ((x >= 0 && x <= 9 || x==',' || x=='.'))
+          return true;
+        else
+          return false;
+      }
+    </script>
+    <title>Splitter | Tip calculator</title>
+  </head>
+  <body>
 
-  <header><img src="dist/images/logo.svg" alt="" id="logo"></header>
+    <header><img src="dist/images/logo.svg" alt="" id="logo"></header>
 
-  <div class="card">
-    
-    <section class="section-1">
+    <div class="card">
+      
+      <section class="section-1">
 
-      <form class="input" autocomplete="off">
-        <h2>Bill</h2>
-        <input inputmode="decimal" type="text" placeholder="0" id="bill" class="input-value" onblur="getSums()" onkeypress="return restrictAlphabets(event)">
-      </form>
+        <form class="input" autocomplete="off">
+          <h2>Bill</h2>
+          <input inputmode="decimal" type="text" placeholder="0" id="bill" class="input-value" onblur="getSums()" onkeypress="return restrictAlphabets(event)">
+        </form>
 
-      <div class="container">
-        <h2>Select Tip %</h2>
-        <div class="options">
-          <button class="option">5%</button>
-          <button class="option">10%</button>
-          <button class="option">15%</button>
-          <button class="option">25%</button>
-          <button class="option">50%</button>
-          <form autocomplete="off">
-            <input inputmode="decimal" type="text" placeholder="Custom" id="custom" onblur="getSums()" onkeypress="return restrictAlphabets(event)">
-          </form>
+        <div class="container">
+          <h2>Select Tip %</h2>
+          <div class="options">
+            <button class="option">5%</button>
+            <button class="option">10%</button>
+            <button class="option">15%</button>
+            <button class="option">25%</button>
+            <button class="option">50%</button>
+            <form autocomplete="off">
+              <input inputmode="decimal" type="text" placeholder="Custom" id="custom" onblur="getSums()" onkeypress="return restrictAlphabets(event)">
+            </form>
+          </div>
         </div>
-      </div>
-      
-      <form class="input" autocomplete="off">
-        <div id="people_label"> <h2>Number of people</h2> <h2 class="hidden">Can't be zero</h2> </div>
-        <input inputmode="decimal" type="text" placeholder="0" id="people", class="input-value" onblur="getSums()" onkeypress="return restrictAlphabets(event)">
-      </form>
-      
-    </section>
+        
+        <form class="input" autocomplete="off">
+          <div id="people_label"> <h2>Number of people</h2> <h2 class="hidden">Can't be zero</h2> </div>
+          <input inputmode="decimal" type="text" placeholder="0" id="people", class="input-value" onblur="getSums()" onkeypress="return restrictAlphabets(event)">
+        </form>
+        
+      </section>
 
-    <section class="section-2">
+      <section class="section-2">
 
-      <div class="output">
-        <h2>Tip Amount</h2>
-        <h3>/ person</h3>
-        <div class="sum tip">$0.00</div>
-      </div>
-      
-      <div class="output">
-        <h2>Total</h2>
-        <h3>/ person</h3>
-        <div class="sum total">$0.00</div>
-      </div>
-      
-      <button id="reset" onclick="clearInputs()">Reset</button>
+        <div class="output">
+          <h2>Tip Amount</h2>
+          <h3>/ person</h3>
+          <div class="sum tip">$0.00</div>
+        </div>
+        
+        <div class="output">
+          <h2>Total</h2>
+          <h3>/ person</h3>
+          <div class="sum total">$0.00</div>
+        </div>
+        
+        <button id="reset" onclick="clearInputs()">Reset</button>
 
-    </section>
+      </section>
+      
+    </div>
     
-  </div>
-  
-  <script src="script.js"></script>
-  
-</body>
+    <script src="script.js"></script>
+    
+  </body>
 </html>
